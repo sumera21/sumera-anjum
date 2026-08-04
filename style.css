@@ -1,0 +1,102 @@
+/* =========================================================
+   AcademicPages-style layout, restyled for Sumera Anjum
+   Palette: ink #17263B · teal #0B7A75 · violet #6D4AC9
+   Type: IBM Plex Serif (headings) · IBM Plex Sans (body)
+   ========================================================= */
+:root{
+  --ink:#17263B;
+  --text:#2B3648;
+  --muted:#6B7686;
+  --line:#E4E7EB;
+  --accent:#0B7A75;
+  --accent-dark:#085F5B;
+  --violet:#6D4AC9;
+  --bg:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans',-apple-system,system-ui,sans-serif;
+  color:var(--text);background:var(--bg);
+  font-size:16px;line-height:1.7;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-dark);text-decoration:underline}
+a:focus-visible{outline:2px solid var(--violet);outline-offset:2px;border-radius:2px}
+h1,h2,h3{font-family:'IBM Plex Serif',Georgia,serif;color:var(--ink);line-height:1.3}
+
+/* ---------- masthead (top nav) ---------- */
+.masthead{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);z-index:20}
+.masthead-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;flex-wrap:wrap;min-height:56px}
+.site-title{font-family:'IBM Plex Serif',serif;font-weight:600;font-size:17px;color:var(--ink);margin-right:auto;padding:12px 0}
+.site-title:hover{color:var(--accent);text-decoration:none}
+.site-title .motto{color:var(--muted);font-weight:400;font-style:italic}
+.masthead nav{display:flex;gap:4px;flex-wrap:wrap}
+.masthead nav a{color:var(--text);font-size:15px;padding:14px 12px;display:block}
+.masthead nav a:hover{color:var(--accent);text-decoration:none}
+.masthead nav a.current{color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent)}
+
+/* ---------- page grid: sidebar + content ---------- */
+.page{max-width:1100px;margin:0 auto;padding:36px 20px 72px;
+  display:grid;grid-template-columns:230px 1fr;gap:48px;align-items:start}
+@media(max-width:800px){.page{grid-template-columns:1fr;gap:32px}}
+
+/* ---------- author sidebar ---------- */
+.author{position:sticky;top:80px;font-size:14.5px}
+@media(max-width:800px){.author{position:static;display:grid;grid-template-columns:auto 1fr;gap:0 20px;align-items:center}
+  .author .links{grid-column:1/-1}}
+.author .avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;margin-bottom:12px;
+  background:linear-gradient(135deg,var(--accent),var(--violet));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-family:'IBM Plex Serif',serif;font-size:52px;font-weight:600}
+.author .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.author h2{font-size:19px;margin-bottom:2px}
+.author .bio{color:var(--muted);font-style:italic;margin-bottom:14px}
+.author .links{list-style:none;border-top:1px solid var(--line);padding-top:12px;display:grid;gap:8px}
+.author .links li{display:flex;gap:9px;align-items:center;color:var(--muted)}
+.author .links svg{width:15px;height:15px;flex:none;stroke:var(--accent);fill:none;stroke-width:2}
+.author .links a{color:var(--text)}
+.author .links a:hover{color:var(--accent)}
+
+/* ---------- content ---------- */
+main h1{font-size:30px;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+main h2{font-size:22px;margin:30px 0 10px}
+main h2 .emoji{margin-right:6px}
+main p{margin-bottom:14px}
+main strong{color:var(--ink)}
+main em{color:var(--muted)}
+blockquote{border-left:3px solid var(--violet);padding:6px 16px;color:var(--muted);font-style:italic;margin:22px 0;background:#FAF9FD;border-radius:0 6px 6px 0}
+
+/* news list */
+ul.news{list-style:none;display:grid;gap:9px;margin:8px 0 4px}
+ul.news li{padding-left:2px}
+ul.news b{color:var(--ink)}
+
+/* publications */
+.pub{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:16px 18px;margin-bottom:14px}
+.pub.preprint{border-left-color:var(--violet)}
+.pub.review{border-left-color:#B8C0CA}
+.pub h3{font-size:17px;margin-bottom:4px}
+.pub .authors{font-size:14.5px;color:var(--muted)}
+.pub .authors b{color:var(--ink)}
+.pub .venue{font-size:13.5px;color:var(--accent-dark);font-weight:600;margin-top:4px}
+.pub.preprint .venue{color:var(--violet)}
+.pub.review .venue{color:var(--muted)}
+
+/* cv page */
+.cv-item{padding:12px 0;border-bottom:1px solid var(--line)}
+.cv-item:last-child{border-bottom:none}
+.cv-head{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:baseline}
+.cv-item h3{font-size:16.5px}
+.cv-item .when{font-size:13.5px;color:var(--muted);white-space:nowrap}
+.cv-item .where{font-size:14.5px;color:var(--accent-dark)}
+.cv-item p{font-size:15px;color:var(--muted);margin:4px 0 0}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 16px;border-radius:6px;font-size:14.5px;margin:4px 0 18px}
+.btn:hover{background:var(--accent-dark);color:#fff;text-decoration:none}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);margin-top:20px}
+.footer-inner{max-width:1100px;margin:0 auto;padding:22px 20px;font-size:13.5px;color:var(--muted);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line)}
+footer a:hover{color:var(--accent)}

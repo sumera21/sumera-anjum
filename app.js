@@ -19,6 +19,8 @@
     ['Beyond Vibe Coding', 'Multi-framework quantum code generation, QAI 2026', 'publications.html#beyond-vibe-coding'],
     ['Quantum hardware design', 'LLM-Driven Hardware Design for Quantum Simulation Acceleration, BigData 2026', 'publications.html#quantum-hardware'],
     ['HALO', 'Clinical question answering, retrieval augmentation, CHASE 2025', 'publications.html#halo'],
+    ['Projects and ongoing work', 'Argonne LLM API costs, token economics, quantum hardware', 'projects.html'],
+    ['Beyond Research', 'Painting, henna, travel, cooking, languages', 'life.html'],
     ['Teaching and mentoring', 'Courses, student mentoring, REU research', 'teaching.html'],
     ['Talks and presentations', 'Token economics guest lecture, ACL ProMCP, CHASE HALO', 'talks.html'],
     ['Professional service', 'QISNet 2027 web chair, conference reviewing', 'service.html'],

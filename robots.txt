@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sumera21.github.io/sumera-anjum/sitemap.xml
